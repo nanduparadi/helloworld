@@ -1,0 +1,78 @@
+<!-- <div class="container mob-table">
+    <div class="headers">
+      <h2 class="table-title">Manage mobiles</h2>
+      <button class="btn add" (click)="showMobile()">Add Mobile</button>
+    </div>
+    <table *ngIf="isAddMobile" >
+      <thead>
+        <tr>
+          <th colspan="2">Mobile Details</th>           
+        </tr>
+        <tr>
+            <td>Brand</td>
+            <td><input type="text" [(ngModel)] = "txt_Brand" value=""/> </td>
+        </tr>
+        <tr>
+            <td>Model Name</td>
+            <td><input type="text" [(ngModel)] = "txt_ModelName" value=""/> </td>
+        </tr>
+        <tr>
+            <td>Memory</td>
+            <td><input type="text" [(ngModel)] = "txt_Memory"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><button type="button" (click)="addMobile()" class="btn add">Save</button></td>
+            
+        </tr>
+
+      </thead>
+    </table>
+    <br>
+    <br>
+
+    <table *ngIf="isAddMobile" class="table table-bordered table-hover">
+      <thead>
+        <tr>
+         <th>Brand</th>
+         <th>Model</th>
+         <th>Memory</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of mobilesArry">
+          <td>{{item.Brand}}</td>
+          <td>{{item.Model}}</td>
+          <td>{{item.Memory}}</td>
+      </tr>
+      </tbody>
+     </table>
+
+  </div> -->
+
+
+
+<!-- <p>count {{count}} value</p>
+<input type="text" [(ngModel)]="name">
+
+<p>welcom {{name}}</p> -->
+
+Name:<input type="text"  [(ngModel)] = "name" > <br>
+Email:<input type="email" [(ngModel)] = "email" > <br>
+
+Gender: <input type="radio" [(ngModel)] = "gender" value="male"> Male
+<input type="radio" [(ngModel)] = "gender" value="female">Female  <br>
+
+Date: <input type="Date"[(ngModel)] = "date"> <br>
+
+Cars: <select name="cars" [(ngModel)]="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+
+<div>
+  <button (click)="show()">click</button>
+</div>
+
+<p>{{demo}}</p>

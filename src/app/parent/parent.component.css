@@ -1,0 +1,17 @@
+button{
+    width: 100px;
+    height: 40px;
+    margin: 10px 15px;
+    background-color: aquamarine;
+
+    color: black;
+    border-radius: 7px;
+    border: none;
+}
+button:hover{
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.35);
+    background-color: aqua;
+    transition: all 0.4s ease-out;
+
+    
+}

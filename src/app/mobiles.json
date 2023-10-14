@@ -1,0 +1,17 @@
+[
+    {
+        "brand":"vivo",
+        "ram":6,
+        "storage":64
+    },
+    {
+        "brand":"oppo",
+        "ram":4,
+        "storage":128
+    },
+    {
+        "brand":"samsung",
+        "ram":2,
+        "storage":256
+    }
+]

@@ -1,0 +1,133 @@
+<!-- <div>this is contact component</div>
+
+<div class="contact">
+    <form >
+    <label>Name:</label>
+    <input type="text"><br>
+    <label>Email:</label>
+    <input type="email"> <br>
+    <label>Gender : </label>
+    <input type="radio"> Male
+    <input type="radio"> Female <br>
+    <label> Select Cars : </label>  
+    <select>  
+    <option value = "BMW"> BMW   
+    </option>  
+    <option value = "Mercedes"> Mercedes   
+    </option>  
+    <option value = "Audi"> Audi  
+    </option>  
+    <option value = "Skoda"> Skoda  
+    </option>  
+    </select> <br>
+    <label>Date : </label>
+    <input type="date"> <br>
+    <button>Submit</button> <br>
+
+    </form>
+  </div>
+
+  <div class="content">
+    <button [ngStyle]="{'font-size.px':50,'color':'red'}">ngStyle</button>
+    <button [ngClass]="{'btn-bold':true,'btn-green':true }">class</button>
+  </div>
+
+   -->
+<div class="container">
+   <form [formGroup]="regForm" class="form-box">
+ <label for="name" class="form-label">  username:</label>
+
+  <input type="text" class="form-control w-50 m-3" formControlName="uName"
+   
+ [class.is-invalid]="uName.invalid && (uName.dirty || uName.touched)" />
+  <!-- [ngClass]="{'is-valid':submited && regForm.uName.errors}" -->
+
+  <!-- <div *ngIf="regForm.get('uName').touched && regForm.get('uname').hasError('required')">username required</div>
+       <div *ngIf="regForm.get('uName').touched && regForm.get('uname').hasError('minlength')  ">minimum 8 charecters required</div>  -->
+
+  <!-- <div *ngIf="submited && regForm.uName.errors" class="invalid-feedback">
+
+          <div *ngIf="regForm.uName.errors.required">is required</div>
+       </div> -->
+
+  <div
+    *ngIf="uName.invalid && (uName.dirty || uName.touched)"
+    class="invalid-feedback"
+  >
+    <div *ngIf="uName.errors?.['required']">This field is required.</div>
+  </div>
+
+ <label for="name" class="form-label">  email:</label>
+  <input type="text" class="form-control w-50 m-3" formControlName="email" 
+  [class.is-invalid]="email.invalid && (email.touched || email.dirty)" />
+  <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                                            class="invalid-feedback">
+                                            <div *ngIf="email.errors?.['required']">
+                                                This field is required.
+                                            </div>
+                                            <div *ngIf="email.errors?.['minlength']">
+                                                This field must have at least 1 character.
+                                            </div>
+                                            <!-- <div
+                                                *ngIf="!email.errors?.['required'] && !email.errors?.['minlength'] && !email.errors?.['maxlength'] && email.errors?.['emailValidator']">
+                                                Invalid email format.
+                                            </div> -->
+                                        </div>
+
+                                        <ul >
+                                          <li>Name: {{uName}}</li>
+                                          <li>Email: {{regForm.value.email}}</li>
+
+                                        </ul>
+
+  <button class="btn btn-primary" (click)="show()">click</button>
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Last Name:</label>
+                                        <input type="text" id="lastName" lastName="name" formControlName="lastName"
+                                            required minlength="1" class="form-control"
+                                            [class.is-invalid]="lastName.invalid && (lastName.dirty || lastName.touched)">
+                                        <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+                                            class="invalid-feedback">
+                                            <div *ngIf="lastName.errors?.['required']">
+                                                This field is required.
+                                            </div>
+                                            <div *ngIf="lastName.errors?.['minlength']">
+                                                This field must have at least 1 character.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email:</label>
+                                        <input type="email" id="email" name="email" formControlName="email" required
+                                            minlength="1" class="form-control"
+                                            [class.is-invalid]="email.invalid && (email.dirty || email.touched)">
+                                        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                                            class="invalid-feedback">
+                                            <div *ngIf="email.errors?.['required']">
+                                                This field is required.
+                                            </div>
+                                            <div *ngIf="email.errors?.['minlength']">
+                                                This field must have at least 1 character.
+                                            </div>
+                                            <div
+                                                *ngIf="!email.errors?.['required'] && !email.errors?.['minlength'] && !email.errors?.['maxlength'] && email.errors?.['emailValidator']">
+                                                Invalid email format.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
