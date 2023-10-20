@@ -9,18 +9,18 @@ import { ServicesComponent } from './services/services.component';
 import { UdemyComponent } from './udemy/udemy.component';
 
 
-const routes:Routes =[
-  {path:'', redirectTo:'Contact', pathMatch:'full'},
-  {path : 'Home', component: HomeComponent,title:'Home'},
-  {path : 'About', component: AboutComponent,title:'About'},
-  {path : "Services", component: ServicesComponent,title:'Services'}, 
-  {path : "Contact", component: ContactComponent,title:'Contact'}, 
-  {path : "Form",component:UdemyComponent,title:'form'},
-  {path : "**" , component:NotfoundComponent}
+const routes: Routes = [
+  { path: '', redirectTo: 'Contact', pathMatch: 'full' },
+  { path: 'Home', component: HomeComponent, title: 'Home' },
+  { path: 'About', component: AboutComponent, title: 'About' },
+  { path: "Services", component: ServicesComponent, title: 'Services' },
+  { path: "Contact", component: ContactComponent, title: 'Contact' },
+  { path: "Form", component: UdemyComponent, title: 'form' },
+  { path: "**", component: NotfoundComponent }
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
 
