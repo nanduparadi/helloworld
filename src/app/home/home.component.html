@@ -6,7 +6,7 @@
     <table *ngIf="isAddMobile" >
       <thead>
         <tr>
-          <th colspan="2">Mobile Details</th>           
+          <th colspan="2">Mobile Details</th>
         </tr>
         <tr>
             <td>Brand</td>
@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <td colspan="2" align="center"><button type="button" (click)="addMobile()" class="btn add">Save</button></td>
-            
+
         </tr>
 
       </thead>
@@ -76,3 +76,6 @@ Cars: <select name="cars" [(ngModel)]="cars">
 </div>
 
 <p>{{demo}}</p>
+
+
+<!-- <h3 *ngFor="let i of rList" (click)="onClick(x)"> <p>Now {{i.name}}</p>  </h3> -->

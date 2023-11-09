@@ -66,7 +66,11 @@ export class HomeComponent {
 
   }
 
+  // rList = [{ "id": 1, "name": "sai" },
+  // { "id": 1, "name": "ram" },
+  // { "id": 1, "name": "nani" }]
+  // onClick(x){
 
-
+  // }
 
 }

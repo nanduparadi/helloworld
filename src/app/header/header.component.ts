@@ -7,14 +7,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
   styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent  {
-  public menuarray : Array<string> = ['Home','About','Services','Contact','Form'];
+  public menuarray :Array<string>= ['Home','About','Services','Contact','Form'];
 
   data = "this is my data";
-  passtoParent(){
+  services(){
     return this.data;
   }
 
   constructor() { }
 
-  
+
 }

@@ -31,9 +31,9 @@
 
     <ul class="navbar-nav">
         <li class="nav-item" *ngFor="let menu of menuarray">
-            <a class="nav-link gap-links" routerLink="{{menu}}" style="font-weight: 700;" >{{menu}}</a>
-        </li>        
-    </ul>     
+            <a class="nav-link gap-links" routerLink="{{menu | lowercase}}" style="font-weight: 700;" >{{menu}}</a>
+        </li>
+    </ul>
   </div>
 </nav>
 </div>

@@ -18,6 +18,9 @@ import { ServicesComponent } from './services/services.component';
 import { MobileService } from './mobile.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UdemyComponent } from './udemy/udemy.component';
+import { AdminAccessComponent } from './admin-access/admin-access.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminAccessGuard } from './admin-access.guard';
 
 RouterModule
 @NgModule({
@@ -34,17 +37,19 @@ RouterModule
     LifeCycleMethodsComponent,
     ServicesComponent,
     UdemyComponent,
-    
+    AdminAccessComponent,
+    AdminHomeComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     FormsModule,
     RouterModule,
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [MobileService],
+  providers: [MobileService,AdminAccessGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
